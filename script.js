@@ -78,17 +78,23 @@
   function buildMemes() {
     const grid = $("#memeGrid");
     if (!grid) return;
-    const captions = [
-      "CEO of NASDOG", "Risk it for the biscuit", "Eat sleep trade repeat",
-      "Buy, hold, moon", "Gains only", "Moon soon, I can feel it",
-      "Stocks over treats", "Back when I'm rich", "Confidence & chill",
-      "Today's plan: buy, hodl, treats", "No sell only hodl", "To the moon",
+    const memes = [
+      [1, "CEO of NASDOG"],
+      [2, "Risk it for the biscuit"],
+      [3, "Eat sleep trade repeat"],
+      [4, "Buy, hold, moon"],
+      [6, "Moon soon, I can feel it"],
+      [7, "Stocks over treats"],
+      [8, "Back when I'm rich"],
+      [9, "Confidence & chill"],
+      [11, "No sell only hodl"],
+      [12, "To the moon"],
     ];
     let html = "";
-    for (let i = 1; i <= 12; i++) {
-      const src = `assets/memes/meme-${i}.png`;
-      html += `<figure class="meme" data-full="${src}" title="${captions[i - 1]}">
-        <img src="${src}" alt="NASDOG meme — ${captions[i - 1]}" loading="lazy" />
+    for (const [n, caption] of memes) {
+      const src = `assets/memes/meme-${n}.png`;
+      html += `<figure class="meme" data-full="${src}" title="${caption}">
+        <img src="${src}" alt="NASDOG meme — ${caption}" loading="lazy" />
       </figure>`;
     }
     grid.innerHTML = html;
