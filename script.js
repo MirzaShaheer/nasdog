@@ -12,8 +12,8 @@
     contract: "Hi5CGskgLMfgrWg2ifY8BwWnmFMrx3BcUkqSgkFRpump",
     links: {
       x: "https://x.com/TheNasdogMeme",
-      pumpfun: "https://pump.fun/",
-      dexscreener: "https://pump.fun/",
+      pumpfun: "https://pump.fun/coin/Hi5CGskgLMfgrWg2ifY8BwWnmFMrx3BcUkqSgkFRpump",
+      dexscreener: "https://dexscreener.com/solana/Hi5CGskgLMfgrWg2ifY8BwWnmFMrx3BcUkqSgkFRpump",
     },
   };
   /* ------------------------------------------------------------- */
