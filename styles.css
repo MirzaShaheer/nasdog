@@ -136,7 +136,7 @@ code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 }
 .nav.scrolled { background: rgba(8, 7, 5, 0.92); border-color: var(--line); }
 .nav__brand { display: flex; align-items: center; gap: 0.6rem; }
-.nav__logo { width: 40px; height: 40px; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); }
+.nav__logo { width: 40px; height: 40px; border-radius: 22%; box-shadow: 0 0 0 1px var(--line); }
 .nav__name { font-family: var(--font-display); font-size: 1.45rem; letter-spacing: 0.05em; color: var(--gold-2); }
 .nav__links { display: flex; gap: 1.6rem; font-weight: 600; font-size: 0.95rem; }
 .nav__links a { color: var(--muted); transition: color 0.15s ease; position: relative; }
@@ -196,15 +196,15 @@ code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 /* Hero art */
 .hero__art { position: relative; display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
 .hero__coin {
-  position: relative; width: min(440px, 80vw); aspect-ratio: 1; border-radius: 50%;
+  position: relative; width: min(440px, 80vw); aspect-ratio: 1; border-radius: 22%;
   animation: float 6s ease-in-out infinite;
 }
 .hero__coin::after {
-  content: ""; position: absolute; inset: -6% ; border-radius: 50%;
+  content: ""; position: absolute; inset: -6% ; border-radius: 22%;
   background: radial-gradient(closest-side, rgba(233, 196, 90, 0.30), transparent 72%);
   z-index: -1; filter: blur(6px);
 }
-.hero__coin img { width: 100%; border-radius: 50%; box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 0 2px rgba(233,196,90,0.25); }
+.hero__coin img { width: 100%; border-radius: 22%; box-shadow: 0 30px 70px rgba(0,0,0,0.6), 0 0 0 2px rgba(233,196,90,0.25); }
 @keyframes float { 0%,100% { transform: translateY(0) rotate(-0.5deg); } 50% { transform: translateY(-14px) rotate(0.5deg); } }
 
 .hero__price {
@@ -294,7 +294,7 @@ code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 .chart { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1rem, 3vw, 1.6rem); box-shadow: var(--shadow); }
 .chart__head { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; }
 .chart__pair { display: flex; align-items: center; gap: 0.7rem; }
-.chart__icon { width: 42px; height: 42px; border-radius: 50%; box-shadow: 0 0 0 1px var(--line); }
+.chart__icon { width: 42px; height: 42px; border-radius: 22%; box-shadow: 0 0 0 1px var(--line); }
 .chart__pair strong { display: block; font-size: 1.05rem; }
 .chart__sub { font-size: 0.8rem; color: var(--muted-2); }
 .chart__quote { text-align: right; }
@@ -335,7 +335,7 @@ code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 
 /* ===== Join ===== */
 .join__inner { text-align: center; max-width: 720px; margin: 0 auto; background: linear-gradient(180deg, var(--panel-2), var(--panel)); border: 1px solid var(--line); border-radius: 26px; padding: clamp(2rem, 5vw, 3.4rem); box-shadow: var(--shadow); }
-.join__logo { width: 96px; height: 96px; border-radius: 50%; margin: 0 auto 1rem; box-shadow: 0 0 0 2px rgba(233,196,90,0.3), 0 12px 30px rgba(0,0,0,0.5); }
+.join__logo { width: 96px; height: 96px; border-radius: 22%; margin: 0 auto 1rem; box-shadow: 0 0 0 2px rgba(233,196,90,0.3), 0 12px 30px rgba(0,0,0,0.5); }
 .join__inner h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2rem, 5vw, 3rem); text-transform: uppercase; }
 .join__inner p { color: var(--muted); margin: 0.8rem auto 1.6rem; max-width: 48ch; }
 .join__btns { display: flex; justify-content: center; gap: 0.8rem; flex-wrap: wrap; }
@@ -344,7 +344,7 @@ code { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; }
 .footer { border-top: 1px solid var(--line); background: #060503; margin-top: 2rem; }
 .footer__inner { max-width: var(--maxw); margin: 0 auto; padding: 2.4rem clamp(1rem, 4vw, 2.4rem); text-align: center; }
 .footer__brand { display: inline-flex; align-items: center; gap: 0.6rem; margin-bottom: 1rem; }
-.footer__brand img { width: 38px; height: 38px; border-radius: 50%; }
+.footer__brand img { width: 38px; height: 38px; border-radius: 22%; }
 .footer__brand span { font-family: var(--font-display); font-size: 1.4rem; letter-spacing: 0.04em; color: var(--gold-2); }
 .footer__brand small { color: var(--muted-2); font-family: var(--font-body); font-size: 0.7rem; }
 .footer__disc { color: var(--muted-2); font-size: 0.8rem; max-width: 70ch; margin: 0 auto 0.9rem; }
