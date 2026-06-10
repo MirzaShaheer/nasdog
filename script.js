@@ -12,8 +12,8 @@
     contract: "So1aNaDOGc0ntractAddre55Here000000000000pump",
     links: {
       x: "https://x.com/TheNasdogMeme",
-      pumpfun: "#",      // https://pump.fun/coin/<contract>
-      dexscreener: "#",  // https://dexscreener.com/solana/<pair>
+      pumpfun: "https://pump.fun/",
+      dexscreener: "https://pump.fun/",
     },
   };
   /* ------------------------------------------------------------- */
