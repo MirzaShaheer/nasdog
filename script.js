@@ -9,7 +9,7 @@
 
   /* ---- EDIT THESE: your real links & contract ----------------- */
   const CONFIG = {
-    contract: "So1aNaDOGc0ntractAddre55Here000000000000pump",
+    contract: "Hi5CGskgLMfgrWg2ifY8BwWnmFMrx3BcUkqSgkFRpump",
     links: {
       x: "https://x.com/TheNasdogMeme",
       pumpfun: "https://pump.fun/",
