@@ -23,10 +23,8 @@ nasdog-site/
      contract: "PASTE_YOUR_CONTRACT_HERE",
      links: {
        x:  "https://x.com/yourhandle",
-       tg: "https://t.me/yourgroup",
+       pumpfun: "https://pump.fun/coin/<contract>",
        dexscreener: "https://dexscreener.com/solana/<pair>",
-       dex: "https://raydium.io/swap/...",
-       jupiter: "https://jup.ag/swap/SOL-NASDOG",
      },
    };
    ```

@@ -12,10 +12,8 @@
     contract: "So1aNaDOGc0ntractAddre55Here000000000000pump",
     links: {
       x: "#",            // https://x.com/yourhandle
-      tg: "#",           // https://t.me/yourgroup
+      pumpfun: "#",      // https://pump.fun/coin/<contract>
       dexscreener: "#",  // https://dexscreener.com/solana/<pair>
-      dex: "#",          // Raydium swap URL
-      jupiter: "#",      // https://jup.ag/swap/SOL-NASDOG
     },
   };
   /* ------------------------------------------------------------- */
