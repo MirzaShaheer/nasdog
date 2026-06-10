@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NASDOG ($NASDOG) — The First Dog on the Trading Floor</title>
+  <meta name="description" content="$NASDOG — the good boy who beat Wall Street. Stocks over treats. Diamond paws only. Chart goes up, tail goes wag." />
+
+  <!-- Open Graph / social cards -->
+  <meta property="og:title" content="NASDOG ($NASDOG) — The First Dog on the Trading Floor" />
+  <meta property="og:description" content="Stocks over treats. Diamond paws only. The good boy who beat Wall Street." />
+  <meta property="og:image" content="assets/logo.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+
+  <!-- Fonts (graceful fallback to system fonts if offline) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== Ticker tape ===== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track" id="tickerTrack"></div>
+  </div>
+
+  <!-- ===== Nav ===== -->
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top">
+      <img src="assets/logo.png" alt="NASDOG logo" class="nav__logo" />
+      <span class="nav__name">NASDOG</span>
+    </a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#how">How to Buy</a>
+      <a href="#chart">Chart</a>
+      <a href="#memes">Memes</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+    <div class="nav__right">
+      <a href="#how" class="btn btn--gold nav__cta">Buy $NASDOG</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <main id="top">
+    <section class="hero">
+      <div class="hero__glow"></div>
+      <div class="hero__inner">
+        <div class="hero__copy reveal">
+          <span class="hero__eyebrow">$NASDOG &middot; The People's (Dog's) Stock</span>
+          <h1 class="hero__title">
+            THE FIRST DOG ON THE <span class="grad">TRADING FLOOR</span>
+          </h1>
+          <p class="hero__sub">
+            Wall Street has bulls and bears. We brought a <strong>very good boy</strong>.
+            Suit on, shades down, chart up. $NASDOG is the memecoin for everyone
+            who picks <strong>stocks over treats</strong> &mdash; and still buys both.
+          </p>
+          <div class="hero__cta">
+            <a href="#how" class="btn btn--gold btn--lg">🚀 Buy $NASDOG</a>
+            <a href="#chart" class="btn btn--ghost btn--lg">📈 Live Chart</a>
+          </div>
+
+          <!-- Contract address -->
+          <div class="ca" id="caBox">
+            <span class="ca__label">Contract</span>
+            <code class="ca__addr" id="caAddr">So1aNaDOGc0ntractAddre55Here000000000000pump</code>
+            <button class="ca__copy" id="caCopy" aria-label="Copy contract address">Copy</button>
+          </div>
+
+          <!-- Stat strip -->
+          <ul class="stats">
+            <li><span class="stats__num" data-count="1000000000">0</span><span class="stats__lbl">Total Supply</span></li>
+            <li><span class="stats__num">0<small>/</small>0</span><span class="stats__lbl">Buy / Sell Tax</span></li>
+            <li><span class="stats__num">100<small>%</small></span><span class="stats__lbl">LP Burned</span></li>
+            <li><span class="stats__num">∞</span><span class="stats__lbl">Good Boy Points</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__art reveal">
+          <div class="hero__coin">
+            <img src="assets/logo.png" alt="NASDOG — a golden puppy in a suit and aviators in front of the Nasdaq board and a Wall Street bull" />
+          </div>
+          <div class="hero__price">
+            <div class="hero__price-row">
+              <span class="hero__ticker">$NASDOG</span>
+              <span class="hero__chg up" id="heroChg">▲ +420.69%</span>
+            </div>
+            <div class="hero__pval" id="heroPrice">$0.000069</div>
+            <div class="hero__sparkline"><canvas id="spark" width="240" height="60"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Marquee badges ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>STOCKS OVER TREATS</span><span>•</span>
+        <span>DIAMOND PAWS</span><span>•</span>
+        <span>NO SELL ONLY HODL</span><span>•</span>
+        <span>RISK IT FOR THE BISCUIT</span><span>•</span>
+        <span>BUY LOW BARK HIGH</span><span>•</span>
+        <span>TO THE MOON 🐶🚀</span><span>•</span>
+        <span>EAT SLEEP TRADE REPEAT</span><span>•</span>
+        <span>STOCKS OVER TREATS</span><span>•</span>
+        <span>DIAMOND PAWS</span><span>•</span>
+        <span>NO SELL ONLY HODL</span><span>•</span>
+        <span>RISK IT FOR THE BISCUIT</span><span>•</span>
+        <span>BUY LOW BARK HIGH</span><span>•</span>
+        <span>TO THE MOON 🐶🚀</span><span>•</span>
+        <span>EAT SLEEP TRADE REPEAT</span><span>•</span>
+      </div>
+    </div>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="kicker">Meet the analyst</span>
+        <h2>Who is <span class="grad">NASDOG</span>?</h2>
+        <p class="lede">
+          Once a regular pup who chased squirrels, NASDOG chased <em>candles</em> instead.
+          He clawed his way from the dog park to the trading floor, learned that the chart
+          only goes up if you believe (and burn the LP), and never sold a single coin.
+          Now he runs the fund. The fund is a couch. The couch is to the moon.
+        </p>
+      </div>
+
+      <div class="pillars">
+        <article class="pillar reveal">
+          <div class="pillar__icon">💎🐾</div>
+          <h3>Diamond Paws</h3>
+          <p>Red candle? He naps. Green candle? He naps. NASDOG does not sell. NASDOG cannot sell. He's a dog and he ate the seed phrase.</p>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar__icon">📈</div>
+          <h3>Bull Market Energy</h3>
+          <p>Born from the same gym as the Wall Street bull, but fluffier. Pure unfiltered "number go up" optimism in a tiny pinstripe suit.</p>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar__icon">🦴</div>
+          <h3>Community First</h3>
+          <p>Every holder is family. Every dip is a snack discount. The pack barks together, hodls together, and moons together.</p>
+        </article>
+        <article class="pillar reveal">
+          <div class="pillar__icon">🔔</div>
+          <h3>Ring the Bell</h3>
+          <p>NASDOG doesn't wait for opening bell — he <em>is</em> the bell. Listed on vibes, traded on hopium, audited by good boys.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Tokenomics ===== -->
+    <section class="section section--alt" id="tokenomics">
+      <div class="section__head reveal">
+        <span class="kicker">The numbers (woof)</span>
+        <h2>Token<span class="grad">omics</span></h2>
+        <p class="lede">No funny business, just funny dog. Fair launch, locked liquidity, zero tax. Read it and weep (tears of joy).</p>
+      </div>
+
+      <div class="tok">
+        <div class="tok__card reveal">
+          <span class="tok__big">1,000,000,000</span>
+          <span class="tok__lbl">Total Supply</span>
+        </div>
+        <div class="tok__card reveal">
+          <span class="tok__big">0%</span>
+          <span class="tok__lbl">Buy &amp; Sell Tax</span>
+        </div>
+        <div class="tok__card reveal">
+          <span class="tok__big">100%</span>
+          <span class="tok__lbl">Liquidity Burned</span>
+        </div>
+        <div class="tok__card reveal">
+          <span class="tok__big">Renounced</span>
+          <span class="tok__lbl">Contract Ownership</span>
+        </div>
+      </div>
+
+      <div class="alloc reveal">
+        <h3 class="alloc__title">Supply Allocation</h3>
+        <ul class="alloc__list">
+          <li><span class="alloc__bar" style="--p:92%"></span><span class="alloc__k">Liquidity Pool (burned)</span><span class="alloc__v">92%</span></li>
+          <li><span class="alloc__bar" style="--p:5%"></span><span class="alloc__k">Community Rewards &amp; Marketing</span><span class="alloc__v">5%</span></li>
+          <li><span class="alloc__bar" style="--p:3%"></span><span class="alloc__k">CEX Listings &amp; Treats Reserve</span><span class="alloc__v">3%</span></li>
+        </ul>
+        <p class="alloc__note">* Treats Reserve is non-negotiable. He's a dog.</p>
+      </div>
+    </section>
+
+    <!-- ===== How to Buy ===== -->
+    <section class="section" id="how">
+      <div class="section__head reveal">
+        <span class="kicker">4 steps to good boy gains</span>
+        <h2>How to <span class="grad">Buy</span></h2>
+        <p class="lede">Not financial advice. It's dog advice. Which is better.</p>
+      </div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <span class="step__n">01</span>
+          <h3>Get a Wallet</h3>
+          <p>Download <strong>Phantom</strong> or <strong>Solflare</strong> on desktop or mobile. Set it up, write your seed phrase on paper, hide it from your actual dog.</p>
+        </article>
+        <article class="step reveal">
+          <span class="step__n">02</span>
+          <h3>Fund with SOL</h3>
+          <p>Buy <strong>SOL</strong> on any exchange (Coinbase, Binance, etc.) and send it to your wallet. Keep a little extra for gas — even good boys pay fees.</p>
+        </article>
+        <article class="step reveal">
+          <span class="step__n">03</span>
+          <h3>Swap for $NASDOG</h3>
+          <p>Head to <strong>Raydium</strong> or <strong>Jupiter</strong>, paste the contract address above, and swap your SOL for $NASDOG. Confirm the trade. Bark.</p>
+        </article>
+        <article class="step reveal">
+          <span class="step__n">04</span>
+          <h3>HODL &amp; Bark</h3>
+          <p>You're in the pack. No sell, only hodl. Join the community, post memes, and tell everyone you bought a dog that beat the market.</p>
+        </article>
+      </div>
+
+      <div class="how__cta reveal">
+        <a href="#" class="btn btn--gold btn--lg" data-link="dex">Buy on Raydium</a>
+        <a href="#" class="btn btn--ghost btn--lg" data-link="jupiter">Swap on Jupiter</a>
+      </div>
+    </section>
+
+    <!-- ===== Chart ===== -->
+    <section class="section section--alt" id="chart">
+      <div class="section__head reveal">
+        <span class="kicker">Technical analysis</span>
+        <h2>The <span class="grad">Chart</span> (it only goes up)</h2>
+        <p class="lede">Our quant team (one dog) ran the numbers. Conclusion: 📈</p>
+      </div>
+
+      <div class="chart reveal">
+        <div class="chart__head">
+          <div class="chart__pair">
+            <img src="assets/logo.png" alt="" class="chart__icon" />
+            <div>
+              <strong>NASDOG / SOL</strong>
+              <span class="chart__sub">NASDOG Exchange &middot; 1D</span>
+            </div>
+          </div>
+          <div class="chart__quote">
+            <span class="chart__price" id="chartPrice">$0.000069</span>
+            <span class="chart__chg up" id="chartChg">▲ +420.69%</span>
+          </div>
+        </div>
+        <canvas id="candles" class="chart__canvas" width="1000" height="420"></canvas>
+        <p class="chart__note">Live chart embed goes here once we're listed — drop your DexScreener / Birdeye iframe in <code>index.html</code>. For now, enjoy the only chart pattern that matters: up.</p>
+      </div>
+    </section>
+
+    <!-- ===== Memes ===== -->
+    <section class="section" id="memes">
+      <div class="section__head reveal">
+        <span class="kicker">From the NASDOG terminal</span>
+        <h2>Meme <span class="grad">Gallery</span></h2>
+        <p class="lede">Right-click, save, post, repeat. Spread the good boy gospel.</p>
+      </div>
+
+      <div class="memes" id="memeGrid">
+        <!-- tiles injected by script.js -->
+      </div>
+    </section>
+
+    <!-- ===== Roadmap ===== -->
+    <section class="section section--alt" id="roadmap">
+      <div class="section__head reveal">
+        <span class="kicker">The business plan</span>
+        <h2>Road<span class="grad">map</span></h2>
+        <p class="lede">Scribbled on a napkin at the dog park. Subject to zoomies.</p>
+      </div>
+
+      <ol class="road">
+        <li class="road__item reveal">
+          <span class="road__phase">Phase 1</span>
+          <h3>🐕 Bark</h3>
+          <p>Fair launch, liquidity burned, contract renounced. Website live. First 1,000 holders join the pack. NASDOG learns what a "candle" is.</p>
+        </li>
+        <li class="road__item reveal">
+          <span class="road__phase">Phase 2</span>
+          <h3>🦴 Bite</h3>
+          <p>CoinGecko &amp; CMC listings. Trending on DexScreener. Meme army mobilized. Influencer partnerships (the influencers are also dogs).</p>
+        </li>
+        <li class="road__item reveal">
+          <span class="road__phase">Phase 3</span>
+          <h3>🔔 IPO (Initial Pup Offering)</h3>
+          <p>CEX listings. 50,000 holders. NASDOG rings the opening bell. Merch drops: tiny suits, diamond collars, "Stocks Over Treats" hoodies.</p>
+        </li>
+        <li class="road__item reveal">
+          <span class="road__phase">Phase 4</span>
+          <h3>🚀 Buy the Nasdaq</h3>
+          <p>Market cap to the moon. NASDOG becomes the first dog CEO of a major exchange. We rename it the <strong>NASDOG</strong>. Treats for all holders. Woof.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== Community ===== -->
+    <section class="section join" id="community">
+      <div class="join__inner reveal">
+        <img src="assets/logo.png" alt="NASDOG" class="join__logo" />
+        <h2>Join the <span class="grad">Pack</span></h2>
+        <p>The trading floor is open and the treats are on the house. Come bark with thousands of degens, diamond-pawed hodlers, and very good boys.</p>
+        <div class="join__btns">
+          <a href="#" class="btn btn--gold btn--lg" data-link="x">𝕏 / Twitter</a>
+          <a href="#" class="btn btn--ghost btn--lg" data-link="tg">✈️ Telegram</a>
+          <a href="#" class="btn btn--ghost btn--lg" data-link="dexscreener">📊 DexScreener</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo.png" alt="NASDOG" />
+        <span>NASDOG <small>$NASDOG</small></span>
+      </div>
+      <p class="footer__disc">
+        $NASDOG is a meme coin with no intrinsic value or expectation of financial return.
+        It is for entertainment purposes only. Memes, not financial advice. Always do your own
+        research (and walk your dog). 🐶
+      </p>
+      <p class="footer__copy">© <span id="year">2026</span> NASDOG. Made with 🦴 by the pack.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
